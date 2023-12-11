@@ -1,5 +1,5 @@
 # Use the official Nginx image as a parent image
-FROM nginx:latest
+FROM custom_nginx:latest
 
 # Set the working directory to /usr/share/nginx/html
 WORKDIR /usr/share/nginx/html
