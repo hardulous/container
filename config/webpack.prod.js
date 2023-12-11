@@ -11,8 +11,8 @@ const domain = process.env.PRODUCTION_DOMAIN;
 const prodConfig = {
   mode: "production",
   output: {
-    filename: "[name].[contenthash].js", 
-    publicPath: "https://demo-con.netlify.app/", 
+    filename: "[name].[contenthash].js",
+    publicPath: "http://container-microfrontend.apps.ocp4.pacosta.com/",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".jsx", ".js", ".json"],
@@ -25,8 +25,9 @@ const prodConfig = {
         "./pubSub": "./src/pub-sub/pubSub.js",
       },
       remotes: {
-        cake: "cake@https://demo-cake.netlify.app/remoteEntry.js",
-        iceCream: "iceCream@https://demo-icecream.netlify.app/remoteEntry.js",
+        cake: "cake@http://cake-microfrontend.apps.ocp4.pacosta.com/remoteEntry.js",
+        iceCream:
+          "iceCream@http://icecream-microfrontend.apps.ocp4.pacosta.com/remoteEntry.js",
       },
       shared: {
         ...deps,
